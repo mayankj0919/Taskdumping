@@ -1,0 +1,189 @@
+.inspect-panel {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  bottom: 0;
+  width: 360px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: slide-in-right 0.3s ease;
+  z-index: 50;
+  overflow-y: auto;
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.inspect-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inspect-header h3 {
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inspect-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.inspect-close:hover {
+  color: var(--text-primary);
+}
+
+.inspect-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.inspect-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.state-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.state-dot.complete {
+  background: var(--green);
+}
+
+.state-dot.pending {
+  background: var(--cyan);
+}
+
+.inspect-label h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.inspect-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inspect-section label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inspect-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.inspect-row {
+  display: flex;
+  gap: 24px;
+}
+
+.inspect-row .inspect-section {
+  flex: 1;
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.priority-badge.high {
+  background: rgba(255, 68, 68, 0.2);
+  color: var(--red);
+}
+
+.priority-badge.medium {
+  background: rgba(255, 170, 0, 0.2);
+  color: var(--yellow);
+}
+
+.priority-badge.low {
+  background: rgba(0, 255, 157, 0.2);
+  color: var(--green);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.complete {
+  background: rgba(0, 255, 157, 0.2);
+  color: var(--green);
+}
+
+.status-badge.pending {
+  background: rgba(0, 245, 255, 0.2);
+  color: var(--cyan);
+}
+
+.status-badge.running {
+  background: rgba(168, 85, 247, 0.2);
+  color: var(--purple);
+}
+
+.inspect-reason {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 12px;
+  background: var(--glass);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--purple);
+}
+
+.inspect-deps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dep-tag {
+  padding: 4px 10px;
+  background: var(--glass);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.inspect-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inspect-actions .btn-ghost.active {
+  border-color: var(--green);
+  color: var(--green);
+}

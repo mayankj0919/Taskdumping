@@ -1,0 +1,66 @@
+.processing-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-deep);
+  z-index: 100;
+}
+
+.processing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.processing-animation {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.processing-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+
+.ring-1 {
+  border-top-color: var(--cyan);
+  animation: spin 1s linear infinite;
+}
+
+.ring-2 {
+  inset: 10px;
+  border-right-color: var(--purple);
+  animation: spin 1.5s linear infinite reverse;
+}
+
+.ring-3 {
+  inset: 20px;
+  border-bottom-color: var(--cyan);
+  animation: spin 2s linear infinite;
+}
+
+.processing-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: pulse-cyan 1.5s ease-in-out infinite;
+}
+
+.processing-message {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  min-width: 200px;
+  text-align: center;
+}

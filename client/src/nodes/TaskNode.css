@@ -1,0 +1,128 @@
+.task-node {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 18px;
+  background: var(--bg-surface);
+  backdrop-filter: blur(var(--blur));
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--cyan);
+  border-radius: var(--radius);
+  min-width: 200px;
+  max-width: 240px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.task-node:hover {
+  transform: translateY(-2px);
+}
+
+.task-node.selected {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+.task-node.high {
+  border-left-color: var(--red);
+}
+
+.task-node.medium {
+  border-left-color: var(--yellow);
+}
+
+.task-node.low {
+  border-left-color: var(--green);
+}
+
+.task-node.pending {
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+}
+
+.task-node.complete {
+  border-left-color: var(--green);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+  opacity: 0.8;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.task-check {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.task-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.task-priority {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.task-priority.high {
+  background: rgba(255, 68, 68, 0.2);
+  color: var(--red);
+}
+
+.task-priority.medium {
+  background: rgba(255, 170, 0, 0.2);
+  color: var(--yellow);
+}
+
+.task-priority.low {
+  background: rgba(0, 255, 157, 0.2);
+  color: var(--green);
+}
+
+.task-handle {
+  width: 10px !important;
+  height: 10px !important;
+  background: var(--cyan) !important;
+  border: 2px solid var(--bg-deep) !important;
+}
+
+.task-handle.target {
+  left: -5px !important;
+}
+
+.task-handle.source {
+  right: -5px !important;
+}

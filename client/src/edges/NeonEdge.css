@@ -1,0 +1,22 @@
+.neon-edge path {
+  stroke: var(--cyan);
+  stroke-width: 2;
+  fill: none;
+  filter: drop-shadow(0 0 6px var(--cyan));
+}
+
+.neon-edge.purple path {
+  stroke: var(--purple);
+  filter: drop-shadow(0 0 6px var(--purple));
+}
+
+.neon-edge-base {
+  stroke-dasharray: 8 4;
+  animation: dash 1s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
