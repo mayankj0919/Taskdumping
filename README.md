@@ -7,7 +7,7 @@ An AI-powered task sequencing and workflow visualization tool that transforms un
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=nodedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue)
+
 
 ---
 
