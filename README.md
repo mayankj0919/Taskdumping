@@ -263,11 +263,6 @@ Contributions are welcome! Please:
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
 
 <p align="center">
   <em>TaskDumping — because your brain works in graphs, not spreadsheets.</em>
