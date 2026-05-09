@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { ReactFlowProvider } from '@xyflow/react';
-import BrainDumpOverlay from './components/BrainDumpOverlay';
+import LandingPage from './components/LandingPage';
 import ProcessingOverlay from './components/ProcessingOverlay';
 import WorkflowCanvas from './components/WorkflowCanvas';
 import TopBar from './components/TopBar';
@@ -211,7 +211,7 @@ function App() {
     <ReactFlowProvider>
       <div className="app-container">
         {phase === 'idle' && (
-          <BrainDumpOverlay onSynthesize={handleSynthesize} />
+          <LandingPage onSynthesize={handleSynthesize} />
         )}
 
         {phase === 'processing' && <ProcessingOverlay />}
